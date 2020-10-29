@@ -7,4 +7,3 @@ function onRequest(request, response) {
 }
 
 http.createServer(onRequest).listen(8000);
-console.log("test")
