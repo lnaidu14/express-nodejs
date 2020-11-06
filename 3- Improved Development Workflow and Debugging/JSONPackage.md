@@ -21,3 +21,19 @@ These packages will be listed in your **package.json** file. If you have saved i
 If the package that we are installing has any dependencies, those will also automatically installed. Because, typically these packages also have a package.json file which has a list of dependencies. All of these are stored in the **node_modules** folder (the package we installed and its dependencies and so on).
 
 nodemon is a package which auto starts the server when we change something in the code and save it. This helps us by removing the tedious action of stopping and restarting the server manually.
+
+### Fixing errors
+
+#### Types of Errors :-
+
+#### Syntax Errors :
+
+Errors caused due to typos in your code.
+
+#### Runtime Errors:
+
+Errors which occur due to the code breaking during run time.
+
+#### Logical Errors:
+
+Doesn't show up as an error in the console. Instead this error is caused due to something logically wrong with your code which is causing your application to not work as intended.

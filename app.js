@@ -1,9 +1,18 @@
-//Usually when importing core modules we use the same name as the module
-const http = require("http");
-const routes = require("./routes");
+const express = require("express");
+const bodyParser = require("body-parser");
 
-//Creates the server
-const server = http.createServer(routes.requestHandler);
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
+const notFoundRoutes = require("./routes/notFound");
 
-//createServer returns server data and we choose port 3000
-server.listen(3000);
+const app = express();
+
+//Parse handling middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use("/admin", adminRoutes);
+app.use(shopRoutes);
+app.use(notFoundRoutes);
+
+//Creating server using app which does what ^^ does
+app.listen(3000);
