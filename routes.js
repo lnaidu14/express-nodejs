@@ -19,7 +19,6 @@ const requestHandler = (req, res) => {
     //Ends the response call
     return res.end();
   }
-
   if (url === "/message" && method === "POST") {
     const body = [];
     //.on "listens" and waits for an event to occur and then executes the callback function
