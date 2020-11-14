@@ -37,3 +37,7 @@ For example if we take:
 Supposing that **shop.js** is in a folder named "routes" and we want to reach another file called **shop.html** in a folder named "views". **\_\_dirname** refers to "routes" here, **../** refers to one step out of the folder, "views" refers to the other folder we need to go into and then again within that we want to reach the file **shop.html**.
 
 We can also use **path.dirname(process.mainModule.filename)** where "mainModule" is the root directory and "filename" is the file that it can search for and find out where it resides. This can be put in a helper function and then called in "app.js" to simplify the code.
+
+### Exposing your code statically
+
+By default, express doesn't show the file path of your code to the public. To do so by convention, you should create a **public** folder and then add a file path to it. Then link a reference to the file you want to expose.
