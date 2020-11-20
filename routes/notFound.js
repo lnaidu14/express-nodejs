@@ -8,7 +8,7 @@ const router = express.Router();
 
 //Route handling middlewares
 router.use((req, res, next) => {
-  res.status(404).sendFile(path.join(rootDir, "views", "notFound.html"));
+  res.status(404).render("notFound.hbs", { docTitle: "Not Found" });
 });
 
 module.exports = router;
