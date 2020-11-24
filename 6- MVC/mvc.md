@@ -1,3 +1,9 @@
-### Controllers
+### Model View Controllers
 
-We can use controllers in our code to put our rendering and logic while were are routing into different modules which we can import and then use. This gets especially useful when the size of our code is increasing and it makes it readable and easier to import it from controller files. These controller files will mainly have the logic which handles the request and response.
+Short form is **MVC**
+
+Models are responsible for representing, managing, saving and fetching your data. It doesn't matter if you manage data in memory, files or databases. It contains data-related logic.
+
+Views are what the user sees. Shouldn't contain too much logic.
+
+Controller connects the model and the view. It should only make sure that the two can communicate in both directions.
