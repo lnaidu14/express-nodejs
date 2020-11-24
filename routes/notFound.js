@@ -2,13 +2,11 @@ const path = require("path");
 
 const express = require("express");
 
-const rootDir = require("../helper/path");
+const errorController = require("../controllers/error");
 
 const router = express.Router();
 
 //Route handling middlewares
-router.use((req, res, next) => {
-  res.status(404).render("notFound.hbs", { docTitle: "Not Found" });
-});
+router.use(errorController.get404);
 
 module.exports = router;
