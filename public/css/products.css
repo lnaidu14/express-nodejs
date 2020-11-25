@@ -49,11 +49,15 @@ main {
 }
 
 .form-control label,
-.form-control input {
+.form-control input,
+.form-control textarea {
   display: block;
+  width: 100%;
+  border-radius: 2px;
 }
 
-.form-control input {
+.form-control input:focus,
+.form-control textarea:focus {
   border: 1px solid #d38014;
   font: inherit;
   border-radius: 2px;
